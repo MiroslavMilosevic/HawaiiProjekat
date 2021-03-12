@@ -1,4 +1,5 @@
 import userData from './userData.js'
+import objectsData from './objectsData.js'
 //import ddd from '../../htmlFiles/html'
 
 function loginFnk(username, password) {
@@ -19,7 +20,7 @@ let returnArray = [];
             console.log(123);
             localStorage.setItem('allUsers', JSON.stringify(userData));
             localStorage.setItem('logedUser', JSON.stringify(el));
-
+            localStorage.setItem('allObjects', JSON.stringify(objectsData));
             window.location.href = "../../front/htmlFiles/home.html";
        
         }
