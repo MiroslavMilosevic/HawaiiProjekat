@@ -1,0 +1,11 @@
+.index-main-div{
+
+    display: block;  
+    text-align: center;
+}
+.input-login{
+
+    width: 50%;
+    height: 2em;
+    text-align: center;
+}

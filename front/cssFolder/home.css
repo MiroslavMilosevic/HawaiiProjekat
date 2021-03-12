@@ -1,0 +1,20 @@
+.home-main-div{
+
+    text-align: center;
+
+    
+}
+#button-add-object{
+
+    height: 5em;
+    width:  30em;
+    font-size: large;
+    margin: 1em;
+}
+
+#button-edit-object{
+    margin: 1em;
+     font-size: large;
+    height: 5em;
+    width:  30em;
+}
