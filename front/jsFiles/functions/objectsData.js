@@ -11,7 +11,29 @@ let objectsData = [{
 },
 {
     "id": 2,
-    "name":"Pivara",
+    "name":"Pivara 1",
+    "description": "pppppppppppasdfasdf",
+    "adress": "Djoleta Davora bb",
+    "email": "pivarakoddavora@gmail.com",
+    "hours": "07-17",
+    "feateured_image":'https://firebasestorage.googleapis.com/v0/b/myfirstproject-1b7bc.appspot.com/o/myPictures%2FWed%20Mar%2003%202021%2015%3A31%3A08%20GMT%2B0100%20(Central%20European%20Standard%20Time)%20-%20WhatsApp.png?alt=media&token=968fbd02-1e51-4b9b-901d-d98d5b24c205',
+    "imagesArray":[2,2,2,2,2],
+    "postsArray":[{},{},{}]
+},
+{
+    "id": 2,
+    "name":"Pivara 2",
+    "description": "pppppppppppasdfasdf",
+    "adress": "Djoleta Davora bb",
+    "email": "pivarakoddavora@gmail.com",
+    "hours": "07-17",
+    "feateured_image":'https://firebasestorage.googleapis.com/v0/b/myfirstproject-1b7bc.appspot.com/o/myPictures%2FWed%20Mar%2003%202021%2015%3A31%3A08%20GMT%2B0100%20(Central%20European%20Standard%20Time)%20-%20WhatsApp.png?alt=media&token=968fbd02-1e51-4b9b-901d-d98d5b24c205',
+    "imagesArray":[2,2,2,2,2],
+    "postsArray":[{},{},{}]
+},
+{
+    "id": 2,
+    "name":"Pivara 3",
     "description": "pppppppppppasdfasdf",
     "adress": "Djoleta Davora bb",
     "email": "pivarakoddavora@gmail.com",

@@ -16,6 +16,8 @@ document.getElementById("button-log").addEventListener('click', function () {
 document.getElementById("button-log-out").addEventListener('click', function () {
     localStorage.setItem('allUsers', '');
     localStorage.setItem('logedUser', '');
+    localStorage.setItem('allObjects', '');
+
     window.location.href = "../../front/htmlFiles/index.html";
 })
 
