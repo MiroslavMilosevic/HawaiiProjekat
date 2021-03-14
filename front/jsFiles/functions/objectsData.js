@@ -21,7 +21,16 @@ let objectsData = [{
 
    
     ],
-    "postsArray": [{}, {}, {}]
+    "postsArray": [
+    {
+        'id':1, 'name':'pivijada', 'duration': '03/10/2021-03.15.2021'
+    }, 
+    {
+        'id':2, 'name':'lomijada', 'duration': '03/10/2021-03.15.2021' 
+    }, 
+    {
+        'id':3, 'name':'rakijada', 'duration': '03/25/2021-06.12.2021'
+    }]
 },
 {
     "id": 2,

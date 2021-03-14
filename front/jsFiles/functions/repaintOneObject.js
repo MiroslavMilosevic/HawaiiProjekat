@@ -1,49 +1,65 @@
 
 
 function repaintOneObject(obj, edit_obj_main_div) {
+    let br1 = document.createElement('br');
+    let br2 = document.createElement('br');
+    let br3 = document.createElement('br');
+    let br4 = document.createElement('br');
+    let br5 = document.createElement('br');
     edit_obj_main_div.innerHTML = '';
 
     let objectWrapperDiv2 = document.createElement('div');
     objectWrapperDiv2.id = "object-wrapper2";
     ///
     //      objectWrapperDiv.append(p_name, p_description, p_adress, p_email, p_hours, objImageWrapper, buttonEditObj);
-    let p_name = document.createElement('p');
-    p_name.className = 'obj-info-paragraph2';
-    p_name.innerText = obj.name;
+    let input_name = document.createElement('input');
+    input_name.className = 'obj-info-input';
+    input_name.value = obj.name;
     ///
-    let p_description = document.createElement('p');
-    p_description.className = 'obj-info-paragraph2';
-    p_description.innerText = obj.description;
+    let input_description = document.createElement('input');
+    input_description.className = 'obj-info-input';
+    input_description.value = obj.description;
     ///
-    let p_adress = document.createElement('p');
-    p_adress.className = 'obj-info-paragraph2';
-    p_adress.innerText = obj.adress;
+    let input_adress = document.createElement('input');
+    input_adress.className = 'obj-info-input';
+    input_adress.value = obj.adress;
     ///
-    let p_email = document.createElement('p');
-    p_email.className = 'obj-info-paragraph2';
-    p_email.innerText = obj.email;
+    let input_email = document.createElement('input');
+    input_email.className = 'obj-info-input';
+    input_email.value = obj.email;
     ///
-    let p_hours = document.createElement('p');
-    p_hours.className = 'obj-info-paragraph2';
-    p_hours.innerText = obj.hours;
+    let input_hours = document.createElement('input');
+    input_hours.className = 'obj-info-input';
+    input_hours.value = obj.hours;
     ///
     let pictures_wrapper_div = document.createElement('div');
     pictures_wrapper_div.className = 'obj-pictures-wrapper';
     console.log(obj);
     obj.imagesArray.forEach(element => {
-        
-        let img = document.createElement('img');
-        img.className='obj-images';
-        img.src=element.url;
-     //   console.log(element.url);
-     //   console.log(element);
-        
-        pictures_wrapper_div.appendChild(img);
-        
-    });
 
+        let img = document.createElement('img');
+        img.className = 'obj-images';
+        img.src = element.url;
+
+        pictures_wrapper_div.appendChild(img);
+    });
+    let imgAdd = document.createElement('img');
+    imgAdd.className = 'obj-images';
+    imgAdd.src ='.././images/add.png';
+     pictures_wrapper_div.appendChild(imgAdd)
     //
-    objectWrapperDiv2.append(p_name, p_description, p_adress, p_email, p_hours, pictures_wrapper_div);
+      let buttonEditEvents = document.createElement('button');
+      buttonEditEvents.innerText='Edit events';
+      buttonEditEvents.addEventListener('click', ()=>{
+        window.location.href = "../../front/htmlFiles/editEvents.html";
+      })
+
+      let buttonCommit = document.createElement('button');
+      buttonCommit.innerText='Commit changes';
+      
+    //
+    objectWrapperDiv2.append(input_name, br1, input_description, br2, input_adress, br3, input_email, br4, input_hours, br5, pictures_wrapper_div,
+        buttonCommit,buttonEditEvents);
     edit_obj_main_div.append(objectWrapperDiv2);
 }
 
