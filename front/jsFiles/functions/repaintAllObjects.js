@@ -1,4 +1,5 @@
 
+
 function repaintAllObjects(nizObjekata, edit_obj_main_div) {
     edit_obj_main_div.innerHTML = ''
     //console.log(edit_obj_main_div);
@@ -6,21 +7,22 @@ function repaintAllObjects(nizObjekata, edit_obj_main_div) {
 
         let objectWrapperDiv = document.createElement('div');
         objectWrapperDiv.id = 'obj-wrapper';
+        ///
         let p_name = document.createElement('p');
         p_name.className = 'obj-info-paragraph';
         p_name.innerText = el.name;
-        ///
-        let p_description = document.createElement('p');
-        p_description.className = 'obj-info-paragraph';
-        p_description.innerText = el.description;
-        ///
-        let p_adress = document.createElement('p');
-        p_adress.className = 'obj-info-paragraph';
-        p_adress.innerText = el.adress;
-        ///
-        let p_email = document.createElement('p');
-        p_email.className = 'obj-info-paragraph';
-        p_email.innerText = el.email;
+        // ///
+        // let p_description = document.createElement('p');
+        // p_description.className = 'obj-info-paragraph';
+        // p_description.innerText = el.description;
+        // ///
+        // let p_adress = document.createElement('p');
+        // p_adress.className = 'obj-info-paragraph';
+        // p_adress.innerText = el.adress;
+        // ///
+        // let p_email = document.createElement('p');
+        // p_email.className = 'obj-info-paragraph';
+        // p_email.innerText = el.email;
         ///
         let p_hours = document.createElement('p');
         p_hours.className = 'obj-info-paragraph';
@@ -37,18 +39,22 @@ function repaintAllObjects(nizObjekata, edit_obj_main_div) {
         let buttonEditObj = document.createElement('button');
         buttonEditObj.className = 'buttonEditObj';
         buttonEditObj.innerText = 'Edit Object';
+        buttonEditObj.addEventListener('click', () => {
+            localStorage.setItem('currentObject', JSON.stringify(el));
+            window.location.href = "../../front/htmlFiles/editOneObj.html";
+         //   repaintOneObject(el, edit_obj_main_div);
+        });
         ///// appending ...
-        objectWrapperDiv.append(p_name, p_description, p_adress, p_email, p_hours, objImageWrapper, buttonEditObj);
+  //      objectWrapperDiv.append(p_name, p_description, p_adress, p_email, p_hours, objImageWrapper, buttonEditObj);
+  objectWrapperDiv.append(p_name, p_hours, objImageWrapper, buttonEditObj);
 
         edit_obj_main_div.append(objectWrapperDiv);
 
-
     });
-
 
 }
 
-export default repaintAllObjects
+export default repaintAllObjects;
 
 //
 // "id": 1,
